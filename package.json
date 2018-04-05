@@ -1,0 +1,53 @@
+{
+  "name": "postcss-purgecss",
+  "version": "1.0.0",
+  "description": "PostCSS plugin for PurgeCSS",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "purgecss"
+  ],
+  "author": "FoundrySH <no-reply@foundry.sh>",
+  "license": "MIT",
+  "repository": "FoundrySH/postcss-purgecss",
+  "bugs": {
+    "url": "https://github.com/FoundrySH/postcss-purgecss/issues"
+  },
+  "homepage": "https://github.com/FoundrySH/postcss-purgecss",
+  "dependencies": {
+    "purgecss": "^0.21.0",
+  },
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^4.19.1",
+    "eslint-config-postcss": "^2.0.2",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "jest": "^22.4.2",
+    "flow-bin": "^0.69.0",
+    "glob": "^7.1.2",
+    "postcss": "^6.0.16",
+    "postcss-selector-parser": "^3.1.1",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-flow": "^1.1.1",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "scripts": {
+    "test": "jest && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
