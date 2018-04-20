@@ -8,10 +8,14 @@ export default {
     input: "src/index.js",
     output: [
         {
-            file: "index.js",
+            file: "lib/postcss-purgecss.es.js",
+            format: "es"
+        },
+        {
+            file: "lib/postcss-purgecss.js",
             format: "cjs"
         }
     ],
     plugins: [builtins(), resolve(), flow(), babel(), uglify()],
-    external: ["postcss", "postcss-selector-parser", "fs", "glob"]
+    external: ['postcss', 'purgecss', 'path']
 }
