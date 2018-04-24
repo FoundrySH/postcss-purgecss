@@ -1,3 +1,5 @@
+// @flow
+
 import path from 'path'
 import postcss from 'postcss'
 import Purgecss from 'purgecss'
@@ -6,7 +8,8 @@ const CONFIG_FILENAME = 'purgecss.config.js'
 const ERROR_CONFIG_FILE_LOADING = 'Error loading the config file'
 
 const loadConfigFile = configFile => {
-    const pathConfig = typeof configFile === 'undefined' ? CONFIG_FILENAME : configFile
+    const pathConfig =
+        typeof configFile === 'undefined' ? CONFIG_FILENAME : configFile
     let options
     try {
         const t = path.resolve(process.cwd(), pathConfig)
@@ -17,8 +20,8 @@ const loadConfigFile = configFile => {
     return options
 }
 
-export default postcss.plugin('postcss-plugin-purgecss', function (opts) {
-    return function (root, result) {
+export default postcss.plugin('postcss-plugin-purgecss', function(opts) {
+    return function(root) {
         if (typeof opts === 'string' || typeof opts === 'undefined')
             opts = loadConfigFile(opts)
 
@@ -32,15 +35,21 @@ export default postcss.plugin('postcss-plugin-purgecss', function (opts) {
         // Get selectors from content files
         const { content, extractors } = purgecss.options
 
-        const fileFormatContents = ((content.filter(o => typeof o === 'string'): Array<any>): Array<
-            string
-        >)
-        const rawFormatContents = ((content.filter(o => typeof o === 'object'): Array<any>): Array<
-            RawContent
-        >)
+        const fileFormatContents = ((content.filter(
+            o => typeof o === 'string'
+        ): Array<any>): Array<string>)
+        const rawFormatContents = ((content.filter(
+            o => typeof o === 'object'
+        ): Array<any>): Array<Purgecss.RawContent>)
 
-        const cssFileSelectors = purgecss.extractFileSelector(fileFormatContents, extractors)
-        const cssRawSelectors = purgecss.extractRawSelector(rawFormatContents, extractors)
+        const cssFileSelectors = purgecss.extractFileSelector(
+            fileFormatContents,
+            extractors
+        )
+        const cssRawSelectors = purgecss.extractRawSelector(
+            rawFormatContents,
+            extractors
+        )
 
         // Get css selectors and remove unused ones
         const cssSelectors = new Set([...cssFileSelectors, ...cssRawSelectors])
