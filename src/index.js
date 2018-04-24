@@ -40,7 +40,7 @@ export default postcss.plugin('postcss-plugin-purgecss', function(opts) {
         ): Array<any>): Array<string>)
         const rawFormatContents = ((content.filter(
             o => typeof o === 'object'
-        ): Array<any>): Array<RawContent>)
+        ): Array<any>): Array<Purgecss.RawContent>)
 
         const cssFileSelectors = purgecss.extractFileSelector(
             fileFormatContents,
