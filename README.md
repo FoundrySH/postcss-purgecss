@@ -1,4 +1,13 @@
 # PostCSS Purgecss
+[![Build Status](https://travis-ci.org/FoundrySH/postcss-purgecss.svg?branch=master)](https://travis-ci.org/FoundrySH/postcss-purgecss)
+[![CircleCi](https://circleci.com/gh/FoundrySH/postcss-purgecss/tree/master.svg?style=shield)]()
+[![dependencies Status](https://david-dm.org/foundrysh/postcss-purgecss/status.svg)](https://david-dm.org/foundrysh/postcss-purgecss)
+[![devDependencies Status](https://david-dm.org/foundrysh/postcss-purgecss/dev-status.svg)](https://david-dm.org/foundrysh/postcss-purgecss?type=dev)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/)](https://www.codacy.com/app/FoundrySH/postcss-purgecss?utm_source=github.com&utm_medium=referral&utm_content=FoundrySH/postcss-purgecss&utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/)](https://www.codacy.com/app/FoundrySH/postcss-purgecss?utm_source=github.com&utm_medium=referral&utm_content=FoundrySH/postcss-purgecss&utm_campaign=Badge_Coverage)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![npm](https://img.shields.io/npm/v/postcss-purgecss.svg)](https://www.npmjs.com/package/postcss-purgecss)
+[![license](https://img.shields.io/github/license/foundrysh/postcss-purgecss.svg)]()
 
 [PostCSS] plugin for PurgeCSS.
 
